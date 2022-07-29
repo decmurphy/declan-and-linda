@@ -1,0 +1,84 @@
+/* This is all you. */
+
+@media (min-width: 1640px) {
+    /* 
+        0.5 * (100% - 1280px) is the width of the gutter in xl screens
+        147px is the width of the triskelle in the logo
+        this will make the start of "Brid" line up with the vision text below
+    */
+    .hero_large {
+        margin-left: -173px;
+    }
+}
+
+.parallax {
+    perspective: 300px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden; /* auto; */
+}
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    /* transform: translate3d(700px, 0, -800px) rotateY(30deg); */
+}
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+.parallax__layer--back {
+    transform: translateZ(-600px) scale(3.9);
+    /* background-image: var(--backgroundImageUrl); */
+    background-position: right;
+}
+
+nav .links li:hover > ul {
+    animation: fadeInRight 0.3s ease;
+    -webkit-animation: fadeInRight 0.3s ease;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(100%, 0, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.menu-container:not(.dropdown-visible) {
+    z-index: -10;
+    perspective: 20000px;
+    transform: translateY(-320px);
+}
+.menu-container:not(.dropdown-visible) .menu-card {
+    height: 320px;
+    transform: rotateX(-90deg);
+}
+
+.menu-container.dropdown-visible {
+    z-index: -10;
+    perspective: 20000px;
+    transform: translateY(0px);
+}
+.menu-container.dropdown-visible .menu-card {
+    height: 320px;
+    transform: rotateX(0deg);
+}
+
+.gradient.left.large {
+    background: linear-gradient(to right, white 5%, rgba(255, 255, 255, 0) 30%);
+}
+
+.gradient.bottom {
+    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 10%);
+}

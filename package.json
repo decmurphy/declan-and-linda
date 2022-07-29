@@ -26,6 +26,7 @@
         "@angular-devkit/build-angular": "^13.3.9",
         "@angular/cli": "~13.2.6",
         "@angular/compiler-cli": "~13.2.6",
+        "@tailwindcss/typography": "^0.5.4",
         "@types/jasmine": "~3.10.0",
         "@types/node": "^12.11.1",
         "@typescript-eslint/eslint-plugin": "^5.31.0",
