@@ -1,0 +1,11 @@
+<div class="fixed inset-0 -z-10 box-border h-screen w-full overflow-hidden bg-purple-400"></div>
+<div class="z-0 flex h-screen max-h-screen min-h-screen w-full flex-col overflow-hidden">
+    <!-- <fc-nav-bar class="shadow"></fc-nav-bar> -->
+    <ng-container *ngTemplateOutlet="contentTmpl"></ng-container>
+</div>
+
+<ng-template #contentTmpl>
+    <div class="mx-auto flex w-full max-w-7xl grow flex-col px-6 pt-8">
+        <ng-content select="[content]"></ng-content>
+    </div>
+</ng-template>
